@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TemaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,10 @@ use App\Http\Controllers\StudentController;
 |
 */
 
+//Rota Tema 
+Route::get('temas', [TemaController::class, 'index']);
+
+//Rota Crud Estudante
 Route::get('students', [StudentController::class, 'index']);
 Route::post('students', [StudentController::class, 'store']);
 Route::get('fetch-students', [StudentController::class, 'fetchstudent']);
