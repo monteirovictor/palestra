@@ -18,8 +18,11 @@ use App\Http\Controllers\TemaController;
 //Rota Tema 
 Route::get('temas', [TemaController::class, 'index']);
 
+//Teste Rota Crud Estudante
+//Route::get('students', [StudentController::class, 'index']);
+
 //Rota Crud Estudante
-Route::get('students', [StudentController::class, 'index']);
+Route::get('students', [StudentController::class, 'index'])->name('student-index');
 Route::post('students', [StudentController::class, 'store']);
 Route::get('fetch-students', [StudentController::class, 'fetchstudent']);
 Route::get('edit-student/{id}', [StudentController::class, 'edit']);
